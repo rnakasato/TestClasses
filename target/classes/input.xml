@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<graph>
+    <vertex id="n1" color="red" thickness="2"/>
+    <vertex id="n2"/>
+    <edge end1="n1" end2="n2"/>
+</graph>

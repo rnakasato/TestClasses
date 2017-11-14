@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="person-template.jrxml" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ade1c0b3-afe0-4389-b5b2-42daa9e2a70a">
+	<property name="ireport.zoom" value="1.9487171000000014"/>
+	<property name="ireport.x" value="33"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="PersonData" uuid="b7e912dc-7cba-46b1-ac1c-9147c171f773"/>
+	<subDataset name="Table Dataset 1" uuid="809c4163-6a39-4054-ae6c-c66ffba60fdb"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="age" class="java.lang.Integer">
+		<fieldDescription><![CDATA[age]]></fieldDescription>
+	</field>
+	<field name="surname" class="java.lang.String">
+		<fieldDescription><![CDATA[surname]]></fieldDescription>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<fieldDescription><![CDATA[firstName]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="208" y="26" width="175" height="37" uuid="487c5fb8-3900-4184-ace8-1db05fbd13c0"/>
+				<textElement>
+					<font fontName="Arial" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERSON REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="356" y="0" width="144" height="20" uuid="eb519c9a-66df-4d75-9768-ba59e48150ad"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="0" width="148" height="20" uuid="df5f61c4-7a52-47ee-ad29-7b56f85a30b4"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="69" y="0" width="139" height="20" uuid="707818a5-df4c-4551-b628-69dfaaac3660"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="69" y="0" width="139" height="20" uuid="8fd83582-bd6e-4928-adfe-1713a1a713bd"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="208" y="0" width="148" height="20" uuid="e2fd7936-362a-46eb-ad3b-eacc68940dd9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Surname]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="144" height="20" uuid="1fc443d5-26fd-43f7-915c-2b86531bb72d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="356" y="0" width="144" height="20" uuid="4820f017-192d-431b-8e7e-ca0affdd6d38"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="208" y="0" width="148" height="20" uuid="1204e09a-9903-48f3-b2c3-1d4da4f531bf"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="69" y="0" width="139" height="20" uuid="12ef10ce-796b-484a-bae7-318695c9faf4"/>
+			</rectangle>
+			<textField isBlankWhenNull="false">
+				<reportElement x="69" y="0" width="139" height="20" isRemoveLineWhenBlank="true" uuid="27e677f9-66b2-4403-8788-6df6f66f88b5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{firstName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="208" y="0" width="148" height="20" isRemoveLineWhenBlank="true" uuid="3d079475-4db3-4ba2-bdf8-4476f77ef66c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{surname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="144" height="20" isRemoveLineWhenBlank="true" uuid="12be9836-4cbd-4fdb-b723-1b4563f06674"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
